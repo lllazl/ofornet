@@ -119,4 +119,14 @@ public class JobServiceImpl implements JobService{
 		return result;
 	}
 
+	@Override
+	public int getCollectTime(int jobid) {
+		Job p = jobMapper.selectByPrimaryKey(jobid);
+		if(p!=null) {
+			int collectTime = p.getCollecttime();
+			return collectTime;
+		}
+		return 0;
+	}
+
 }

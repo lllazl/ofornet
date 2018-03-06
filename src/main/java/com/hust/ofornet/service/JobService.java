@@ -18,5 +18,6 @@ public interface JobService {
     List<Job> list();
     
     public List<Job> search(String keyword);
-
+    
+    public int getCollectTime(int jobid);
 }
